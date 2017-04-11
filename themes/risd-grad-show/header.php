@@ -28,19 +28,23 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php wp_head(); ?>
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css?ts=<?=time()?>" />
 
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
 
 	</head>
 	
-	<!-- Uncomment this line if using the Off-Canvas Menu --> 
+	<body <?php body_class(); ?>>
+	<?php /*
+	
+	<!-- Uncomment this line if using the Off-Canvas Menu --
 		
 	<body <?php body_class(); ?>>
 
 		<div class="off-canvas-wrapper">
 							
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+			<?php //get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
@@ -48,6 +52,6 @@
 						
 					 <!-- This navs will be applied to the topbar, above all content 
 						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+					 <?php// get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 	 	
-				</header> <!-- end .header -->
+				</header> <!-- end .header --> */ ?>

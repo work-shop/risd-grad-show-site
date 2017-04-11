@@ -11,6 +11,8 @@ CSS file.
 // Import custom mixins
 @import "mixins";
 
+@import "variables";
+
 // Import local Foundation overrides - Don't link to Bower version as it will be overwritten whenever updated
 @import "settings";
 

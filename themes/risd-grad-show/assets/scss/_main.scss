@@ -20,6 +20,42 @@ a, a:visited {
 	}
 }
 
+
+a {
+	color: $brand-black;
+	text-transform: uppercase;
+	position: relative;
+	
+	&:hover {
+		color: $brand-black;
+	}
+}
+
+.red-line {
+	
+		&:after {
+		    content: '';
+		    background: red;
+		    position: absolute;
+		    width: 100%;
+		    height: 2px;
+		    left: 0;
+		    //bottom: 0;
+		    top: 50%;
+		    -ms-transform: rotate(-10deg); /* IE 9 */
+		    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-10deg);
+		    opacity: 0;
+		  }
+	
+	&:hover {
+		
+		&:after {
+			opacity: 1;
+    	}
+	}
+}
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -83,9 +119,206 @@ NAVIGATION STYLES
 	}
 }
 
+.nav-box {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	border: 2px solid $brand-black;
+	padding: 1.6em 1em 1em 1em;
+	text-align: center;
+	background: white;
+	z-index: 100;
+	
+	ul {
+		list-style: none;
+		margin-left: 0;
+		display: inline-block;
+		
+		li {
+			a {
+			    padding: 0rem 1rem;
+			    @extend .red-line;
+			}
+		}
+	}
+	
+	@include breakpoint(medium up) {
+	 	width: auto;
+	 	bottom: 15px;
+	 	right: 15px;
+ 	}
+ }
+ 
+ 
+ .grid {
+	width: 250%;
+	position: relative;
+	
+	.grid-item {
+		float: left;
+		//background-color: #00ffff;
+		position: relative;
+		width: 25%;
+		overflow: hidden;
+		
+		&:hover {
+			background: repeating-linear-gradient(
+			  -45deg,
+			  yellow,
+			  yellow 30px,
+			  white 30px,
+			  white 40px
+			);
+		}
+	}
+	
+	.date {
+		width: 650px;
+	}
+	
+	.gradshow {
+		width: 800px;
+	}
+	
+	.location {
+		width: 800px;
+	}
+	
+	.risd {
+		width: 640px;
+	}
+	
+	.thesis {
+		width: 600px;
+	}
+	
+	.grid-sizer {
+		width: 25%;
+	}
+	
+	.all-departments {
+		
+		&:hover {
+			background: none;
+		}
+		
+		ul {
+			list-style: none;
+			margin-left: 0;
+			
+			li {
+				padding: .5rem;
+				border: 1px solid black;
+				display: inline-block;
+				float: left;
+				
+				a {
+					@extend .red-line;
+				}
+			}
+		}
+	}
+
+}
+
+
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+.reveal-overlay {
+	background: rgba( $brand-white, .5 );
+}
+
+.reveal {
+	text-align: center;
+	border: 2px solid $brand-black;
+	padding-top: 2.5em;
+	
+	.flex-video {
+		padding-bottom: 50%;
+		width: 75%;
+		display: inline-block;
+	}
+	
+	p {
+		text-align: left;
+	}
+	
+	h2 {
+		font-size: 1rem;
+		text-transform: uppercase;
+		text-align: left;
+	}
+	
+	.close-button {
+		color: $brand-black;
+		font-size: 1.5rem;
+		
+		&:after {
+			content: none;
+		}
+		
+	}
+	
+	ul {
+		list-style: none;
+		margin-left: 0;
+		
+		li {
+			text-transform: uppercase;
+			text-align: left;
+			
+			a {
+				@extend .red-line;
+			}
+		}
+	}
+	
+	.accordion-title {
+		font-size: 1rem;
+		color: $brand-black;
+		
+		&:after {
+			content: none;
+		}
+	}
+}
+
+#allstudents {
+	max-height: 600px;
+	overflow-y: scroll;
+	
+	@include breakpoint( medium up ) {
+		padding: 0;
+		
+		.close-button {
+			display: none;
+		}
+	}
+	
+	.accordion-content {
+		ul {
+			li {
+				display: inline;
+				margin-right: 1.2em;
+			}
+		}
+	}
+}
+
+.students-list {
+	
+	
+	@include breakpoint( medium up ) {
+		width: 300px;
+		padding-top: 1em;
+	}
+}
+
+
+
 #content {
 	#inner-content {
 		padding: 1rem 0rem;

@@ -1,0 +1,36 @@
+{
+    "name": "endless",
+    "title": "jQuery scroll endless",
+    "description": "jQuery plugin for infinite scroll on HTML element.",
+    "keywords": [
+        "scroll",
+		"endless",
+        "infinite"
+    ],
+    "version": "2.2.0",
+    "author": {
+        "name": "Totodunet",
+        "url": "http://totodu.net/"
+    },
+    "maintainers": [
+        {
+            "name": "Thomas TRIBUTSCH",
+            "email": "thomas@totodu.net",
+            "url": "http://totodu.net/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+	"demo": "http://totodunet.github.io/endless/",
+	"bugs": "https://github.com/totodunet/endless.js/issues",
+    "homepage": "http://totodunet.github.io/",
+    "docs": "https://github.com/totodunet/endless.js",
+    "download": "http://github.com/totodunet/endless.js/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}

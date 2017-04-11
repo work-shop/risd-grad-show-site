@@ -19,6 +19,7 @@ Mixins & Constants.
 /*********************
 TOOLS
 *********************/
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=b2e4036a-8e1a-44e8-89c7-e6fd7346f556&fontids=723679");
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -49,6 +50,11 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+@font-face {
+  font-family: "LinotypeUniversW01-Medi_723679";
+  src: url("../Fonts/723679/48a42ae4-2dae-4819-a76c-c4a39ba76875.eot?#iefix");
+  src: url("../Fonts/723679/48a42ae4-2dae-4819-a76c-c4a39ba76875.eot?#iefix") format("eot"), url("../Fonts/723679/194b06cf-7326-4c18-9a5a-937865061822.woff2") format("woff2"), url("../Fonts/723679/d7cf6a30-fb6a-4725-9c93-2372d9f4bb8d.woff") format("woff"), url("../Fonts/723679/fb6dd99b-78b9-4459-b787-00d3f0fc0c9f.ttf") format("truetype"); }
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.0
@@ -937,7 +943,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "LinotypeUniversW01-Medi_723679", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -1802,7 +1808,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "LinotypeUniversW01-Medi_723679", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -2099,10 +2105,6 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #cacaca; }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #cacaca; }
-
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #cacaca; }
@@ -2283,8 +2285,6 @@ select {
   border-color: #cc4b37;
   background-color: #f9ecea; }
   .is-invalid-input:not(:focus)::-webkit-input-placeholder {
-    color: #cc4b37; }
-  .is-invalid-input:not(:focus)::-moz-placeholder {
     color: #cc4b37; }
   .is-invalid-input:not(:focus):-ms-input-placeholder {
     color: #cc4b37; }
@@ -4352,6 +4352,29 @@ LINK STYLES
 a:link, a:visited:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
+a {
+  color: #000;
+  text-transform: uppercase;
+  position: relative; }
+  a:hover {
+    color: #000; }
+
+.red-line:after, .nav-box ul li a:after, .grid .all-departments ul li a:after, .reveal ul li a:after {
+  content: '';
+  background: red;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  /* IE 9 */
+  /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);
+  opacity: 0; }
+
+.red-line:hover:after, .nav-box ul li a:hover:after, .grid .all-departments ul li a:hover:after, .reveal ul li a:hover:after {
+  opacity: 1; }
+
 /*********************
 H1, H2, H3, H4, H5 P STYLES
 *********************/
@@ -4377,9 +4400,114 @@ NAVIGATION STYLES
   .off-canvas-list ul .dropdown {
     margin-left: 20px; }
 
+.nav-box {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border: 2px solid #000;
+  padding: 1.6em 1em 1em 1em;
+  text-align: center;
+  background: white;
+  z-index: 100; }
+  .nav-box ul {
+    list-style: none;
+    margin-left: 0;
+    display: inline-block; }
+    .nav-box ul li a {
+      padding: 0rem 1rem; }
+  @media screen and (min-width: 40em) {
+    .nav-box {
+      width: auto;
+      bottom: 15px;
+      right: 15px; } }
+
+.grid {
+  width: 250%;
+  position: relative; }
+  .grid .grid-item {
+    float: left;
+    position: relative;
+    width: 25%;
+    overflow: hidden; }
+    .grid .grid-item:hover {
+      background: repeating-linear-gradient(-45deg, yellow, yellow 30px, white 30px, white 40px); }
+  .grid .date {
+    width: 650px; }
+  .grid .gradshow {
+    width: 800px; }
+  .grid .location {
+    width: 800px; }
+  .grid .risd {
+    width: 640px; }
+  .grid .thesis {
+    width: 600px; }
+  .grid .grid-sizer {
+    width: 25%; }
+  .grid .all-departments:hover {
+    background: none; }
+  .grid .all-departments ul {
+    list-style: none;
+    margin-left: 0; }
+    .grid .all-departments ul li {
+      padding: .5rem;
+      border: 1px solid black;
+      display: inline-block;
+      float: left; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.reveal-overlay {
+  background: rgba(242, 242, 242, 0.5); }
+
+.reveal {
+  text-align: center;
+  border: 2px solid #000;
+  padding-top: 2.5em; }
+  .reveal .flex-video {
+    padding-bottom: 50%;
+    width: 75%;
+    display: inline-block; }
+  .reveal p {
+    text-align: left; }
+  .reveal h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: left; }
+  .reveal .close-button {
+    color: #000;
+    font-size: 1.5rem; }
+    .reveal .close-button:after {
+      content: none; }
+  .reveal ul {
+    list-style: none;
+    margin-left: 0; }
+    .reveal ul li {
+      text-transform: uppercase;
+      text-align: left; }
+  .reveal .accordion-title {
+    font-size: 1rem;
+    color: #000; }
+    .reveal .accordion-title:after {
+      content: none; }
+
+#allstudents {
+  max-height: 600px;
+  overflow-y: scroll; }
+  @media screen and (min-width: 40em) {
+    #allstudents {
+      padding: 0; }
+      #allstudents .close-button {
+        display: none; } }
+  #allstudents .accordion-content ul li {
+    display: inline;
+    margin-right: 1.2em; }
+
+@media screen and (min-width: 40em) {
+  .students-list {
+    width: 300px;
+    padding-top: 1em; } }
+
 #content #inner-content {
   padding: 1rem 0rem; }
 

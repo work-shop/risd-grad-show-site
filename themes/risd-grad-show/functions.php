@@ -29,6 +29,9 @@ require_once(get_template_directory().'/assets/functions/departments.php');
 // Add Advanced Custom Fields Options Page
 require_once(get_template_directory().'/assets/functions/acf-options.php');
 
+// Load Masonry
+require_once(get_template_directory().'/assets/functions/masonry.php');
+
 
 // Remove 4.2 Emoji Support
 // require_once(get_template_directory().'/assets/functions/disable-emoji.php'); 
