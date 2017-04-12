@@ -22,7 +22,6 @@ jQuery(".grid").mason({
 	ratio: 4,
 	sizes: [
 		[1,1],
-		//[1,2],
 		[1,2],
 		[1,3]
 		
@@ -49,6 +48,7 @@ jQuery(window).load(function(){
 	    
 	    //load in the middle of the field
          scrollTo((jQuery(document).width() - jQuery(window).width()) / 2, 0);
+          scrollTo((jQuery(document).height() - jQuery(window).height()) / 2, 0);
          
     });
 });

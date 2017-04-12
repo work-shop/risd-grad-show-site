@@ -21,7 +21,6 @@ jQuery(".grid").mason({
 	ratio: 4,
 	sizes: [
 		[1,1],
-		//[1,2],
 		[1,2],
 		[1,3]
 		

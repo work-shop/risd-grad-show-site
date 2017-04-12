@@ -4422,27 +4422,17 @@ NAVIGATION STYLES
       right: 15px; } }
 
 .grid {
-  width: 250%;
+  width: 230%;
   position: relative; }
   .grid .grid-item {
     float: left;
     position: relative;
-    width: 25%;
+    max-width: 20%;
     overflow: hidden; }
     .grid .grid-item:hover {
       background: repeating-linear-gradient(-45deg, yellow, yellow 30px, white 30px, white 40px); }
-  .grid .date {
-    width: 650px; }
-  .grid .gradshow {
-    width: 800px; }
-  .grid .location {
-    width: 800px; }
-  .grid .risd {
-    width: 640px; }
-  .grid .thesis {
-    width: 600px; }
   .grid .grid-sizer {
-    width: 25%; }
+    width: 10%; }
   .grid .all-departments:hover {
     background: none; }
   .grid .all-departments ul {
