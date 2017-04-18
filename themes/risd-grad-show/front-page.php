@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 
+<div class="direction-left"></div>
+<div class="direction-right"></div>
+<div class="direction-up"></div>
+<div class="direction-down"></div>
+
 <?php get_template_part( 'parts/modal', 'about' ); ?>
 <?php get_template_part( 'parts/modal', 'allstudents' ); ?>
 <?php get_template_part( 'parts/modal', 'students' ); ?>

@@ -1,4 +1,4 @@
-<ul class="accordion" data-accordion>
+<ul class="accordion" data-accordion data-allow-all-closed="true">
 
 <?php $loop = new WP_Query( array( 'post_type' => 'department' ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>

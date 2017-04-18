@@ -6,7 +6,9 @@
 	//remove spaces from the department name ex. Graphic Design -> graphicdesign
 	$department = strtolower(str_replace(' ', '', get_the_title()));
 		
-	$id = 'id="' . $department . '"';
+	$clean_department = str_replace('+','',$department);
+		
+	$id = 'id="' . $clean_department . '"';
 	
 	$aria_label = 'aria-labelledby="' . $department . '"';
 

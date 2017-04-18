@@ -5,11 +5,8 @@ function site_scripts() {
     // Load What-Input files in footer
     wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/dist/what-input.min.js', array(), '', true );
     
-     // Load MasonJS files in footer
-    wp_enqueue_script( 'masonJS', get_template_directory_uri() . '/vendor/Mason-master/dist/mason.min.js', array(), '', true );
-    
-     // Load Endless JS files in footer
-    wp_enqueue_script( 'endlessJS', get_template_directory_uri() . '/vendor/endless.js-master/endless.min.js', array(), '', true );
+     // Load In-Viewport
+    wp_enqueue_script( 'inViewport', get_template_directory_uri() . '/vendor/viewport/jquery.viewport.mini.js', array(), '', true );
     
     // Adding Foundation scripts file in the footer
     wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/assets/js/foundation.js', array( 'jquery' ), '6.2.3', true );
