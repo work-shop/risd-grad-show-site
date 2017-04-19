@@ -2482,7 +2482,7 @@ a {
   color: #000;
   text-transform: uppercase;
   position: relative; }
-  a:hover {
+  a:hover, a:focus {
     color: #000; }
 
 .red-line:after, .nav-box ul li a:after, .grid .all-departments ul li:after, .reveal ul li a:after {
@@ -2507,6 +2507,10 @@ H1, H2, H3, H4, H5 P STYLES
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
 
+h3, .h3 {
+  font-size: 1rem;
+  text-transform: uppercase; }
+
 .nav-box {
   position: fixed;
   width: 100%;
@@ -2529,19 +2533,16 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
       right: 15px; } }
 
 .grid {
-  width: 400vw;
+  width: 700vw;
   position: relative; }
   .grid .grid-item {
     float: left;
     position: relative;
-    width: 10%;
+    width: calc( 100% / 12);
     overflow: hidden; }
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-      .grid .grid-item {
-        width: 20%; } }
     @media screen and (max-width: 39.9375em) {
       .grid .grid-item {
-        width: 25%; } }
+        width: calc( 100% / 4); } }
     .grid .grid-item:hover {
       background: repeating-linear-gradient(-45deg, yellow, yellow 30px, white 30px, white 40px); }
   .grid .info {

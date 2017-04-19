@@ -5,14 +5,14 @@
 	
 	//remove spaces from the department name ex. Graphic Design -> graphicdesign
 	$department = strtolower(str_replace(' ', '', get_the_title()));
-		
+	
+	//further remove the plus signs from the department name ex. teaching+learninginart+design -> teachinglearninginartdesign
 	$clean_department = str_replace('+','',$department);
 		
 	$id = 'id="' . $clean_department . '"';
 	
 	$aria_label = 'aria-labelledby="' . $department . '"';
 
-	
 	?>
 
 <div <?php echo $id; ?> class="reveal students-list" data-reveal <?php echo $aria_label; ?> aria-hidden="true" role="dialog">

@@ -25,38 +25,6 @@ var tiles = document.querySelector('.grid');
 for (var i = tiles.children.length; i >= 0; i--) {
     tiles.appendChild(tiles.children[Math.random() * i | 0]);
 }
-//Using Masonry
-
-/*
-jQuery('.grid').masonry({
-  columnWidth: '.grid-sizer',
-  itemSelector: '.grid-item',
-  gutter: 0,
-  fitWidth: true
-});
-*/
-
-//Using Mason JS
-/*
-jQuery(".grid").mason({
-	itemSelector: ".grid-item",
-	ratio: 10,
-	sizes: [
-		[1,1]
-		
-	],
-	columns: [
-        [0,1700,10]
-    ],
-/*	promoted: [
-        ['.date', 1, 4],
-        ['.gradshow', 1, 1],
-        ['.location', 1, 1],
-        ['.thesis', 1, 1]
-    ], 
-	
-    layout: 'fluid'
-}); */
 function shuffle(array) {
   var m = array.length, t, i;
 

@@ -26,7 +26,7 @@ a {
 	text-transform: uppercase;
 	position: relative;
 	
-	&:hover {
+	&:hover, &:focus {
 		color: $brand-black;
 	}
 }
@@ -76,7 +76,8 @@ h2, .h2 {
 }
 
 h3, .h3 {
-
+	font-size: 1rem;
+	text-transform: uppercase;
 }
 
 h4, .h4 {
@@ -118,24 +119,19 @@ h5, .h5 {
  }
  
  
+ 
  .grid {
-	width: 400vw;
-	//height: 400vh;
+	width: 700vw;
 	position: relative;
 	
 	.grid-item {
 		float: left;
 		position: relative;
-		width: 10%;
-		//min-height: 70vh;
+		width: calc( 100% / 12 );
 		overflow: hidden;
 		
-		@include breakpoint(medium only) {
-			width: 20%;
-		}
-		
 		@include breakpoint(small only) {
-			width: 25%;
+			width: calc( 100% / 4 );
 		}
 		
 		&:hover {
