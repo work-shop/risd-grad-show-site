@@ -1,4 +1,4 @@
-<?php $loop = new WP_Query( array( 'post_type' => 'department' ) ); ?>
+<?php $loop = new WP_Query( array( 'post_type' => 'department', 'posts_per_page' => 16 ) ); ?>
 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 <?php

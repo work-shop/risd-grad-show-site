@@ -191,11 +191,19 @@ h5, .h5 {
 				border: 1px solid black;
 				display: inline-block;
 				float: left;
-				width: 50%;
-				height: 12.5%;
+				width: 25%;
+				height: 25%;
 				position: relative;
 				
-				@extend .red-line;
+				&:hover, &:focus {
+					background: repeating-linear-gradient(
+					  -45deg,
+					  yellow,
+					  yellow 30px,
+					  white 30px,
+					  white 40px
+					);
+				}
 				
 				a {
 					width: 100%;
