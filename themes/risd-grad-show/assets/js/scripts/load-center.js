@@ -28,6 +28,7 @@ jQuery(window).load(function(){
          
         //show the tiles after they load 
          jQuery( '.grid-item' ).removeClass( 'loading' );  
+         jQuery( '.nav-box' ).removeClass( 'loading' );  
          
         var $all = jQuery(".grid-item:in-viewport");
         var $tiles = 3 + Math.floor(Math.random() * 10);   

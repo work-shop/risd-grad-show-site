@@ -1,4 +1,4 @@
-<nav class="nav-box">
+<nav class="nav-box loading">
 	
 	<ul class="menu">
 		
