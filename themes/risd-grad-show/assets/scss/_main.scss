@@ -93,7 +93,7 @@ h5, .h5 {
 	width: 100%;
 	bottom: 0;
 	border: 2px solid $brand-black;
-	padding: 1.6em 1em 1em 1em;
+	padding: 1.2em .7em .7em .7em;
 	text-align: center;
 	background: white;
 	z-index: 100;
@@ -132,6 +132,10 @@ h5, .h5 {
 		
 		@include breakpoint(small only) {
 			width: calc( 100% / 4 );
+			
+			&:hover {
+				background: white !important;
+			}
 		}
 		
 		&:hover {
@@ -145,31 +149,7 @@ h5, .h5 {
 		}
 	}
 	
-	.date {
-		//width: 650px;
-	}
-	
-	.gradshow {
-		//width: 800px;
-	}
-	
-	.location {
-		//width: 800px;
-	}
-	
-	.risd {
-		//width: 640px;
-	}
-	
-	.thesis {
-		//width: 600px;
-	}
-	
-	.grid-sizer {
-		//width: 10%;
-	}
-	
-	.info {
+	.grid-item.info {
 		background: none !important;
 		cursor: default;
 	}
@@ -194,6 +174,11 @@ h5, .h5 {
 				width: 25%;
 				height: 25%;
 				position: relative;
+				
+				@include breakpoint (small only) {
+					width: 50%;
+					height: 12.5%;
+				}
 				
 				&:hover, &:focus {
 					background: repeating-linear-gradient(
@@ -230,12 +215,32 @@ h5, .h5 {
 	-ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
+    
+    &:hover {
+		background: repeating-linear-gradient(
+			-135deg,
+			  yellow,
+			  yellow 30px,
+			  white 30px,
+			  white 40px 
+		) !important;
+	}
 }
 
 .rotate-right {
 	-ms-transform: rotate(-90deg); /* IE 9 */
     -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
     transform: rotate(-90deg);
+    
+    &:hover {
+		background: repeating-linear-gradient(
+			-135deg,
+			  yellow,
+			  yellow 30px,
+			  white 30px,
+			  white 40px 
+		) !important;
+	}
 }
 
 
@@ -248,6 +253,17 @@ POSTS & CONTENT STYLES
 	background: rgba( $brand-white, .5 );
 }
 
+#about, #directions {
+	a {
+		text-transform: none;
+		font-size: .85rem;
+		
+		@include breakpoint(small only) {
+			font-size: 1rem;
+		}
+	}
+}
+
 .reveal {
 	text-align: center;
 	border: 2px solid $brand-black;
@@ -258,14 +274,32 @@ POSTS & CONTENT STYLES
 		
 	}
 	
+	a {
+		color: #00aeef;
+	}
+	
 	.flex-video {
 		padding-bottom: 50%;
 		width: 75%;
 		display: inline-block;
+		
+		@include breakpoint(small only) {
+			width: 100%;
+		}
 	}
 	
 	p {
 		text-align: left;
+		width: 75%;
+		display: inline-block;
+		font-size: .85rem;
+		line-height: 1.35;
+		letter-spacing: .01em;
+		
+		@include breakpoint(small only) {
+			width: 100%;
+			font-size: 1rem;
+		}
 	}
 	
 	h2 {
@@ -276,15 +310,15 @@ POSTS & CONTENT STYLES
 	
 	.close-button {
 		color: $brand-black;
-		font-size: 1.5rem;
+		font-size: 1.5rem !important;
 		
 		&:after {
 			content: none;
 		}
 		
-		@include breakpoint(small down) {
-			top: 1rem;
-			font-size: 2rem;
+		@include breakpoint(medium down) {
+			top: 0;
+			font-size: 3rem !important;
 		}
 		
 	}
@@ -327,8 +361,15 @@ POSTS & CONTENT STYLES
 	
 	.accordion-content {
 		ul {
+			-moz-column-count: 2;
+			-moz-column-gap: 20px;
+			-webkit-column-count: 2;
+			-webkit-column-gap: 20px;
+			column-count: 2;
+			column-gap: 20px;
+
 			li {
-				display: inline;
+				//display: inline;
 				margin-right: 1.2em;
 			}
 		}
@@ -399,15 +440,24 @@ POSTS & CONTENT STYLES
 			);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-  font-weight: 200;
-  -webkit-font-smoothing: antialiased;
-  -webkit-user-select: none;
-  -moz-user-select: moz-none;
-  -ms-user-select: none;
-  user-select: none;
+.acf-map {
+	width: 75%;
+	height: 400px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
+	display: inline-block;
+	
+	@include breakpoint(small only) {
+		width: 100%;
+	}
+}
+
+::selection {
+	color: white;
+	background: #00aeef;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
 }
