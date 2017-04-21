@@ -24,6 +24,7 @@
 			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
+	    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.jpg" />
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
