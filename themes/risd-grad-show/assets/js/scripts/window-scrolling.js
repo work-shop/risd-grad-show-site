@@ -3,7 +3,7 @@ var v_amount = '';
 
 function scroll_h() {
     console.log('scrolling left and right'+h_amount);
-    jQuery('body').animate({
+    jQuery('body, html').animate({
         scrollLeft: h_amount
     }, 100, 'linear',function() {
         if (h_amount !== '') {
@@ -13,7 +13,7 @@ function scroll_h() {
 }
 function scroll_v() {
     console.log('scrolling up and down'+v_amount);
-    jQuery('body').animate({
+    jQuery('body, html').animate({
         scrollTop: v_amount
     }, 100, 'linear',function() {
         if (v_amount !== '') {
