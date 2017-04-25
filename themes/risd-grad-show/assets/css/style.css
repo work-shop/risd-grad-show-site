@@ -2516,7 +2516,7 @@ h3, .h3 {
   width: 100%;
   bottom: 0;
   border: 2px solid #000;
-  padding: 1.2em .7em .7em .7em;
+  padding: .8em .7em .3em .7em;
   text-align: center;
   background: white;
   z-index: 100; }
@@ -2660,9 +2660,14 @@ POSTS & CONTENT STYLES
       text-align: left; }
   .reveal .accordion-title {
     font-size: 1rem;
-    color: #000; }
+    color: #000;
+    border: 1px solid #000; }
+    .reveal .accordion-title:hover, .reveal .accordion-title:focus {
+      background: yellow; }
     .reveal .accordion-title:after {
       content: none; }
+    .reveal .accordion-title .accordion-content {
+      border: 2px solid #000; }
 
 #allstudents {
   max-height: 600px;
@@ -2739,12 +2744,12 @@ POSTS & CONTENT STYLES
       width: 100%; } }
 
 ::-moz-selection {
-  color: white;
-  background: #00aeef; }
+  color: #000;
+  background: yellow; }
 
 ::selection {
-  color: white;
-  background: #00aeef; }
+  color: #000;
+  background: yellow; }
 
 /* fixes potential theme css conflict */
 .acf-map img {

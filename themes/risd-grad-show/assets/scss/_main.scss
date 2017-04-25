@@ -93,7 +93,7 @@ h5, .h5 {
 	width: 100%;
 	bottom: 0;
 	border: 2px solid $brand-black;
-	padding: 1.2em .7em .7em .7em;
+	padding: .8em .7em .3em .7em;
 	text-align: center;
 	background: white;
 	z-index: 100;
@@ -340,9 +340,18 @@ POSTS & CONTENT STYLES
 	.accordion-title {
 		font-size: 1rem;
 		color: $brand-black;
+		border: 1px solid $brand-black;
+		
+		&:hover, &:focus {
+			background: yellow;
+		}
 		
 		&:after {
 			content: none;
+		}
+		
+		.accordion-content {
+			border: 2px solid $brand-black;
 		}
 	}
 }
@@ -453,8 +462,8 @@ POSTS & CONTENT STYLES
 }
 
 ::selection {
-	color: white;
-	background: #00aeef;
+	color: $brand-black;
+	background: yellow;
 }
 
 /* fixes potential theme css conflict */
