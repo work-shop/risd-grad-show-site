@@ -195,6 +195,10 @@ function shuffle(array) {
   return array;
 }
 
+document.documentElement.addEventListener('gesturestart', function (event) {
+    event.preventDefault();      
+}, false);
+
 
 jQuery(window).load(function(){
 
